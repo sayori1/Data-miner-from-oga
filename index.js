@@ -12,7 +12,7 @@ let assetCount = 0;
 pr.launch({ headless: true }).then(async (browser) => {
   const page = await browser.newPage();
 
-  for (let j = 0; j < 10; j++) {
+  for (let j = 0; j < 5000; j++) {
     await page.goto(getOGALink(j), { timeout: 0 });
 
     const links = await page.evaluate(() => {
